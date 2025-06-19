@@ -7,12 +7,10 @@ const router = createRouter({
   routes: [
     {
       path: "/component",
-      name: "Component",
       component: Component,
     },
     {
       path: "/mustache",
-      name: "Mustache",
       component: Mustache,
     },
   ],
