@@ -1,35 +1,49 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Component from "@/views/Component.vue";
-import Mustache from "@/views/Mustache.vue";
-import Chapter3 from "@/views/Chapter3.vue";
-import Chapter4 from "@/views/Chapter4.vue";
-import Chapter5 from "@/views/Chapter5.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: "/",
+      redirect: "/component",
+    },
+    {
       path: "/component",
-      component: Component,
+      component: () => import("@/views/Component.vue"),
     },
     {
       path: "/mustache",
-      component: Mustache,
+      component: () => import("@/views/Mustache.vue"),
     },
     {
       path: "/chapter3",
       name: "Chapter3",
-      component: Chapter3,
+      component: () => import("@/views/Chapter3.vue"),
     },
     {
       path: "/chapter4",
       name: "Chapter4",
-      component: Chapter4,
+      component: () => import("@/views/Chapter4.vue"),
     },
     {
       path: "/chapter5",
       name: "Chapter5",
-      component: Chapter5,
+      component: () => import("@/views/Chapter5.vue"),
+    },
+    {
+      path: "/chapter6",
+      name: "Chapter6",
+      component: () => import("@/views/Chapter6.vue"),
+    },
+    {
+      path: "/chapter7",
+      name: "Chapter7",
+      component: () => import("@/views/Chapter7.vue"),
+    },
+    {
+      path: "/chapter8",
+      name: "Chapter8",
+      component: () => import("@/views/Chapter8.vue"),
     },
   ],
 });

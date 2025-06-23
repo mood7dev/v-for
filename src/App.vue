@@ -5,6 +5,9 @@ import Mustache from "@/views/Mustache.vue";
 import Chapter3 from "@/views/Chapter3.vue";
 import Chapter4 from "@/views/Chapter4.vue";
 import Chapter5 from "@/views/Chapter5.vue";
+import Chapter6 from "@/views/Chapter6.vue";
+import Chapter7 from "@/views/Chapter7.vue";
+import Chapter8 from "@/views/Chapter8.vue";
 
 const tabs = [
   { name: "Component", label: "컴포넌트", component: Component },
@@ -12,6 +15,9 @@ const tabs = [
   { name: "Chapter3", label: "Chapter3", component: Chapter3 },
   { name: "Chapter4", label: "Chapter4", component: Chapter4 },
   { name: "Chapter5", label: "Chapter5", component: Chapter5 },
+  { name: "Chapter6", label: "Chapter6", component: Chapter6 },
+  { name: "Chapter7", label: "Chapter7", component: Chapter7 },
+  { name: "Chapter8", label: "Chapter8", component: Chapter8 },
 ];
 
 const activeTab = ref(null); // 기본은 아무것도 안 열려 있음
@@ -46,7 +52,7 @@ function toggleTab(name) {
 
 button {
   font-family: "Noto Sans KR", "Roboto", sans-serif;
-  margin-right: 10px;
+  margin: 5px 10px;
   padding: 6px 12px;
   background-color: #e0e0e0;
   border: none;
